@@ -311,54 +311,10 @@
     <footer class="mt-20 py-16 bg-slate-900 text-white border-t border-slate-800 text-left">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-                
-                <!-- Coluna 1: Funções do Roteador -->
-                <div>
-                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">FUNÇÕES DO ROTEADOR</h5>
-                    <div class="text-xs leading-relaxed text-white space-y-3">
-                        <p>É o cérebro da rede:</p>
-                        <ul class="list-disc pl-4 space-y-2">
-                            <li>Gerencia o tráfego, decidindo o melhor caminho para o destino.</li>
-                            <li>O roteador central 
-                                <span class="term-tooltip text-brand-500 font-bold">distribui os endereços IPs
-                                    <span class="term-content">
-                                        <strong>DHCP (Dynamic Host Protocol)</strong> é o serviço que faz a distribution automática de configurações de rede para os aparelhos. É como a recepção de um hotel entregando o número do quarto e dizendo por qual corredor você passa e onde fica a saída.
-                                    </span>
-                                </span> para os dispositivos.
-                            </li>
-                            <li>Separa a sua rede local da "Infernet", permitindo configurações de segurança, tais como bloqueio de sites maliciosos, ataques de hackers, 
-                                <span class="term-tooltip font-bold text-brand-500">controle parental
-                                    <span class="term-content">
-                                        O seu filho(a) passa a madrugada em claro no Instagram ou jogando LoL? Bloqueie o acesso dele(a) à internet a partir das 22 horas.
-                                    </span>
-                                </span>. Já ouviu falar nisso: é o Firewall.
-                            </li>
-                            <li>Receba o combo visitas e a pergunta "Qual é a senha do Wi-Fi?". Então crie uma rede isolada para elas. Afinal, os seus convidados não devem configurar a sua Alexa nem a impressora da casa.</li>
-                            <li>Priorização de tráfego: caso o PlayStation esteja monopolizando toda a banda contratada com a operadora e prejudique a sua videoconferência, estabeleça uma velocidade máxima para o videogame; é o <strong>QoS (Quality of Service)</strong>.</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Coluna 2: Topologias de Rede -->
+                <!-- Coluna 1: Qual a Melhor Provedora? -->
                 <div>
-                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">TOPOLOGIAS DE REDE</h5>
-                    <div class="text-xs leading-relaxed text-white space-y-3">
-                        <p>Refere-se ao arranjo dos nós:</p>
-                        <ul class="list-disc pl-4 space-y-2">
-                            <li>Na <div class="footer-img-popup">Topologia Estrela<div class="footer-img-content">
-                                <img src="https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/star_topology.png" alt="Topologia Estrela" class="rounded-lg">
-                            </div></div>, os satélites falam direto com o Nó Principal (Prós: menor latência e maior estabilidade; Contra: alcance limitado ao centro).</li>
-                            <li>Na <div class="footer-img-popup">Topologia em Cadeia (Daisy Chain)<div class="footer-img-content">
-                                <img src="https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/daisy_chain_topology.png" alt="Topologia em Cadeia" class="rounded-lg">
-                            </div></div>, um nó se liga ao outro em fila (Pró: vence grandes distâncias lineares; Contra: cada "salto" extra reduz a velocidade e se um nó cai, derruba os seguintes).</li>
-                            <li>Repare que na topologia estrela os roteadores estão ligados por cabos de rede. Na topologia em cadeia eles se interligam por um backhaul wireless. É sempre preferível a interligação por cabo.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Coluna 3: Ligação à Provedora -->
-                <div>
-                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">LIGAÇÃO À PROVEDORA INTERNET</h5>
+                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">QUAL A MELHOR PROVEDORA?</h5>
                     <div class="text-[11px] leading-relaxed text-white">
                         <ul class="list-disc pl-4 space-y-3">
                             <li>No Rio, a oferta de internet banda larga limita-se a Claro e VIVO. Mesmo que apareça no seu escaninho de correspondência um flyer de alguma prestadora de menor porte com preço mais barato e velocidade maior, não é recomendável.</li>
@@ -376,6 +332,50 @@
                                     <span class="term-content">GPON significa Gigabit Passive Optical Network e é como a Claro chama a rede 100% fibra.</span>
                                 </span>.
                             </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Topologias de Rede -->
+                <div>
+                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">TOPOLOGIAS DE REDE</h5>
+                    <div class="text-xs leading-relaxed text-white space-y-3">
+                        <p>Refere-se ao arranjo dos nós:</p>
+                        <ul class="list-disc pl-4 space-y-2">
+                            <li>Na <div class="footer-img-popup">Topologia Estrela<div class="footer-img-content">
+                                <img src="https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/star_topology.png" alt="Topologia Estrela" class="rounded-lg">
+                            </div></div>, os satélites falam direto com o Nó Principal (Prós: menor latência e maior estabilidade; Contra: alcance limitado ao centro).</li>
+                            <li>Na <div class="footer-img-popup">Topologia em Cadeia (Daisy Chain)<div class="footer-img-content">
+                                <img src="https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/daisy_chain_topology.png" alt="Topologia em Cadeia" class="rounded-lg">
+                            </div></div>, um nó se liga ao outro em fila (Pró: vence grandes distâncias lineares; Contra: cada "salto" extra reduz a velocidade e se um nó cai, derruba os seguintes).</li>
+                            <li>Nas figuras acima, na Topologia Estrela os roteadores estão ligados por cabos de rede e a Daisy Chain por um backhaul wireless. Mas poderia ser o contrário; o método de conexão independe da topologia.<br>Mas lembre-se: qualquer que seja a topologia mais adequada ao seu ambiente, a interligação por cabo será sempre preferível.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coluna 3: Funções do Roteador -->
+                <div>
+                    <h5 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">FUNÇÕES DO ROTEADOR</h5>
+                    <div class="text-xs leading-relaxed text-white space-y-3">
+                        <p>É o cérebro da rede:</p>
+                        <ul class="list-disc pl-4 space-y-2">
+                            <li>Gerencia o tráfego, decidindo o melhor caminho para o destino.</li>
+                            <li>O roteador central 
+                                <span class="term-tooltip text-brand-500 font-bold">distribui os endereços IPs
+                                    <span class="term-content">
+                                        <strong>DHCP (Dynamic Host Protocol)</strong> é o serviço que faz a distribuição automática de configurações de rede para os aparelhos. É como a recepção de um hotel entregando o número do quarto e dizendo por qual corredor você passa e onde fica a saída.
+                                    </span>
+                                </span> para os dispositivos.
+                            </li>
+                            <li>Separa a sua rede local da "Infernet", permitindo configurações de segurança, tais como bloqueio de sites maliciosos, ataques de hackers, 
+                                <span class="term-tooltip font-bold text-brand-500">controle parental
+                                    <span class="term-content">
+                                        O seu filho(a) passa a madrugada em claro no Instagram ou jogando LoL? Bloqueie o acesso dele(a) à internet a partir das 22 horas.
+                                    </span>
+                                </span>. Já ouviu falar nisso: é o Firewall.
+                            </li>
+                            <li>Receba o combo visitas e a pergunta "Qual é a senha do Wi-Fi?". Então crie uma rede isolada para elas. Afinal, os seus convidados não devem configurar a sua Alexa nem a impressora da casa.</li>
+                            <li>Priorização de tráfego: caso o PlayStation esteja monopolizando toda a banda contratada com a operadora e prejudique a sua videoconferência, estabeleça uma velocidade máxima para o videogame; é o <strong>QoS (Quality of Service)</strong>.</li>
                         </ul>
                     </div>
                 </div>
