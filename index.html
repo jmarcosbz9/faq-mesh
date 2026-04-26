@@ -403,68 +403,89 @@
                 
                 <h2 class="text-3xl font-black mb-8 border-l-4 border-brand-500 pl-6 uppercase tracking-tight">Conclusão</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div>
-                        <h4 class="text-brand-500 font-bold uppercase text-xs tracking-widest mb-4">Melhor Custo x Benefício</h4>
-                        <p class="text-lg font-bold text-white mb-4">Huawei WiFi Mesh 7</p>
-                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
-                            Pelos preços encontrados recentemente (R$ 450), o Huawei WiFi Mesh 7 é imbatível. Oferece um duto de backhaul **MIMO 4x4 físico** robusto, ideal para vencer paredes de alvenaria.
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                    <!-- Card 1: Melhor custo-benefício hoje -->
+                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-slate-700">
+                        <h4 class="text-brand-500 font-bold uppercase text-xs tracking-widest mb-3">Melhor custo-benefício hoje</h4>
+                        <p class="text-lg font-black text-white mb-3">Huawei WiFi Mesh 7</p>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            A R$ 572/unidade, oferece <strong class="text-white">MIMO 4x4 físico</strong> robusto e Wi-Fi 6 Plus Tri-Band. Ideal para quem precisa vencer paredes de alvenaria agora, sem gastar muito. Disponível no Mercado Livre.
                         </p>
                     </div>
 
-                    <div>
-                        <h4 class="text-brand-500 font-bold uppercase text-xs tracking-widest mb-4">Mudar de casa antes de o trocar</h4>
-                        <p class="text-lg font-bold text-white mb-4">TP-Link Deco BE75</p>
-                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
-                            O BE75 traz o benefício real do Wi-Fi 7 (Tri-Band e MLO) com hardware **MIMO 4x4**. É a escolha para quem quer longevidade tecnológica absoluta.
+                    <!-- Card 2: Aguardar -->
+                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-amber-500/40">
+                        <h4 class="text-amber-400 font-bold uppercase text-xs tracking-widest mb-3">⏳ Aguardar antes de comprar</h4>
+                        <p class="text-lg font-black text-white mb-3">TP-Link Deco BE65 Pro</p>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            A novidade de 2026: <strong class="text-white">MIMO 4x4 + Wi-Fi 7 + MLO</strong> a US$ 299/par nos EUA — hardware equivalente ao BE75 por menos da metade do preço. Ainda sem data de chegada ao Brasil, mas vale monitorar.
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Longevidade absoluta -->
+                    <div class="bg-slate-800/60 rounded-2xl p-6 border border-slate-700">
+                        <h4 class="text-brand-500 font-bold uppercase text-xs tracking-widest mb-3">Longevidade absoluta</h4>
+                        <p class="text-lg font-black text-white mb-3">TP-Link Deco BE75</p>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Wi-Fi 7 Tri-Band, <strong class="text-white">MIMO 4x4</strong>, MLO e porta 10G SFP+. O teto tecnológico atual para redes domésticas. A escolha para quem não quer voltar a este assunto tão cedo — e tem ~R$ 5.400 disponíveis.
                         </p>
                     </div>
                 </div>
 
-                <div id="detailed-comparison" class="hidden mt-12 pt-8 border-t border-slate-800">
-                    <h3 class="text-xl font-bold mb-6 text-brand-500 uppercase">Huawei Mesh 7 vs Deco BE75</h3>
+                <div id="detailed-comparison" class="hidden mt-4 pt-8 border-t border-slate-800">
+                    <h3 class="text-xl font-bold mb-6 text-brand-500 uppercase">Comparativo: Huawei Mesh 7 · Deco BE65 Pro · Deco BE75</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left text-sm">
                             <thead class="bg-slate-800/80 text-brand-500 uppercase text-[10px] tracking-widest">
                                 <tr>
                                     <th class="p-4 border-b border-slate-700">Recurso</th>
                                     <th class="p-4 border-b border-slate-700">Huawei Mesh 7</th>
-                                    <th class="p-4 border-b border-slate-700">TP-Link Deco BE75</th>
+                                    <th class="p-4 border-b border-slate-700 text-amber-400">Deco BE65 Pro</th>
+                                    <th class="p-4 border-b border-slate-700">Deco BE75</th>
                                 </tr>
                             </thead>
                             <tbody class="text-slate-300">
                                 <tr>
-                                    <td class="p-4 border-b border-slate-800 font-bold">Investimento Sugerido</td>
-                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">R$ 450 (unid)</td>
-                                    <td class="p-4 border-b border-slate-800 text-amber-400 font-bold">~R$ 5.400 (par)</td>
+                                    <td class="p-4 border-b border-slate-800 font-bold">Preço BR</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">R$ 572 (unid)</td>
+                                    <td class="p-4 border-b border-slate-800 text-amber-400 font-bold">~R$ 2.900 (par) — em breve</td>
+                                    <td class="p-4 border-b border-slate-800 text-slate-300 font-bold">~R$ 5.400 (par)</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 border-b border-slate-800 font-bold">MIMO (Antenas)</td>
+                                    <td class="p-4 border-b border-slate-800 font-bold">MIMO</td>
                                     <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4 (Físico)</td>
                                     <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4 (Físico)</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4 (Físico)</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 border-b border-slate-800 font-bold">Tecnologia</td>
-                                    <td class="p-4 border-b border-slate-800">Wi-Fi 6 Plus</td>
-                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">Wi-Fi 7 (MLO)</td>
+                                    <td class="p-4 border-b border-slate-800 font-bold">Wi-Fi</td>
+                                    <td class="p-4 border-b border-slate-800">6 Plus</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">7 (MLO)</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">7 (MLO)</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 border-b border-slate-800 font-bold">Backhaul Throughput</td>
+                                    <td class="p-4 border-b border-slate-800 font-bold">Backhaul</td>
                                     <td class="p-4 border-b border-slate-800">4.8 Gbps</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">5.8 Gbps</td>
                                     <td class="p-4 border-b border-slate-800 text-brand-500 font-black italic">10 Gbps (via 6GHz)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border-b border-slate-800 font-bold">Porta máx.</td>
+                                    <td class="p-4 border-b border-slate-800">1G</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">2.5G (×3 por nó)</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-black italic">10G SFP+</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <div class="mt-10 pt-8 border-t border-slate-800 flex flex-col items-center gap-6 text-center">
+                <div class="mt-10 pt-8 border-t border-slate-800 flex flex-col items-center gap-4 text-center">
                     <button id="toggle-comparison" class="bg-brand-500 hover:bg-brand-600 text-slate-900 font-black px-8 py-3 rounded-full text-xs uppercase tracking-widest transition-all">
                         Ver comparativo detalhado
                     </button>
-                    
-                    <span class="text-white text-xs md:text-sm block mt-6 text-center max-w-4xl leading-relaxed font-bold italic opacity-80">
-                        *O Deco BE85 continua a ser o melhor em performance bruta, mas os achados de ML tornam o Huawei e o Acer as melhores escolhas financeiras.
+                    <span class="text-slate-500 text-xs block mt-2 italic">
+                        Preços pesquisados em abril/2026 · Câmbio R$ 5,85/USD
                     </span>
                 </div>
             </div>
@@ -552,56 +573,80 @@
     </footer>
 
     <script>
+        const USD_BRL = 5.85; // câmbio abril 2026
+
         const routerData = [
             { 
                 id: 1, name: "TP-Link Deco BE85", region: "Brasil", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 10, total: 22.0, 
                 url: "https://www.tp-link.com/br/home-networking/deco/deco-be85/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE85.png",
                 desc: "Top performance. Hardware 4x4 total para interligar os nós com 10Gbps reais.",
-                prices: { BR: "A definir" }, unit: "PAR (2 UNIDADES)"
+                priceBR: null, priceBRLabel: "Em breve", vendorBR: "TP-Link BR",
+                priceUSA: 449.99, vendorUSA: "Best Buy (3-pack)",
+                unit: "PAR (2 UNIDADES)"
             },
             { 
                 id: 10, name: "TP-Link Deco BE75", region: "Brasil", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 8, total: 17.0, 
                 url: "https://www.tp-link.com/pt/home-networking/deco/deco-be75/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE75.jpg",
                 desc: "Vantagens: Wi-Fi 7 Tri-Band, MLO e antenas 4x4. Longevidade tecnológica garantida.",
-                prices: { BR: "5.400" }, unit: "PAR (2 UNIDADES)"
+                priceBR: 5400, vendorBR: "Mercado Livre",
+                priceUSA: 399.99, vendorUSA: "Amazon USA (2-pack)",
+                unit: "PAR (2 UNIDADES)"
             },
             { 
                 id: 3, name: "Huawei WiFi Mesh 7", region: "Brasil", wifi: "Wi-Fi 6 Plus", mimo: "4x4", backhaul: 4.8, price: 1, total: 6.6, 
                 url: "https://consumer.huawei.com/br/routers/wifi-mesh7/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Huawei_AX6600_Mesh_7.PNG",
                 desc: "Focado em penetração de sinal em alvenaria. Ótimo custo-benefício 4x4 no Brasil.",
-                prices: { BR: "450" }, unit: "UNIDADE"
+                priceBR: 572, vendorBR: "Mercado Livre",
+                priceUSA: null, priceBRLabel: null, vendorUSA: "Não disponível nos EUA",
+                unit: "UNIDADE"
             },
             { 
                 id: 11, name: "Acer Predator Connect T7", region: "Brasil", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 2, total: 10.7, 
                 url: "https://www.acer.com/br-pt/predator/networking/wi-fi/predator-connect-t7-wifi-7-mesh-router/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/acer_predator.png",
                 desc: "Focado em gamers. Traz o Intel Killer Prioritization Engine para latência mínima.",
-                prices: { BR: "650" }, unit: "UNIDADE",
-                obs: 'Obs.: No <a href="https://www.mercadolivre.com.br/roteador-acer-predator-connect-t7-wi-fi-7-de-trs-bandas/p/MLB50678410" target="_blank" class="text-brand-500 font-bold">Mercado Livre</a> encontrei por R$ 650.'
+                priceBR: 759, vendorBR: "Amazon BR",
+                priceUSA: 149.99, vendorUSA: "Amazon USA",
+                unit: "UNIDADE"
             },
             { 
                 id: 4, name: "TP-Link Deco BE65", region: "Brasil", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 6, total: 11.0, 
                 url: "https://www.tp-link.com/br/home-networking/deco/deco-be65/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE65.png",
                 desc: "Porta de entrada para Wi-Fi 7. 2x2 com MLO para compensar a falta de antenas extras.",
-                prices: { BR: "2.869" }, unit: "PAR (2 UNIDADES)"
+                priceBR: 2899, vendorBR: "Mercado Livre",
+                priceUSA: 179.99, vendorUSA: "Amazon USA (2-pack)",
+                unit: "PAR (2 UNIDADES)"
+            },
+            { 
+                id: 12, name: "TP-Link Deco BE65 Pro", region: "Brasil", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 5.8, price: 5, total: 11.0, 
+                url: "https://www.tp-link.com/br/home-networking/deco/deco-be65-pro/",
+                img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE65.png",
+                desc: "O melhor custo-benefício Wi-Fi 7 de 2026. 4x4 MIMO, três portas 2.5G por nó, MLO e design compacto elegante.",
+                priceBR: null, priceBRLabel: "~R$ 2.900", vendorBR: "Chegando ao Brasil",
+                priceUSA: 299.00, vendorUSA: "Amazon USA (2-pack)",
+                unit: "PAR (2 UNIDADES)"
             },
             { 
                 id: 5, name: "Netgear Orbi 960", region: "EUA", wifi: "Wi-Fi 6E", mimo: "4x4", backhaul: 10.0, price: 9, total: 10.8, 
                 url: "https://www.netgear.com/home/wifi/mesh/rbke963/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Netgear_Orbi_960.png",
                 desc: "Referência premium. Banda exclusiva quad-stream dedicada apenas para o backhaul.",
-                prices: { BR: "14.500" }, unit: "TRIO (3 UNIDADES)" 
+                priceBR: 14500, vendorBR: "Importado / ML",
+                priceUSA: 699.00, vendorUSA: "Amazon USA (3-pack, renovado)",
+                unit: "TRIO (3 UNIDADES)"
             },
             { 
-                id: 8, name: "TP-Link Archer BE900", region: "China", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 9, total: 24.0, 
+                id: 8, name: "TP-Link Archer BE900", region: "Brasil", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 9, total: 24.0, 
                 url: "https://www.tp-link.com/us/home-networking/wifi-router/archer-be900/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Archer_BE900_WiFi_7_Router.png",
-                desc: "Futurista e poderoso. Suporte total a 320MHz e backhaul wireless de performance de fibra.",
-                prices: { BR: "6.990" }, unit: "UNIDADE" 
+                desc: "Futurista e poderoso. Quad-band Wi-Fi 7, tela LED touch, suporte total a 320MHz.",
+                priceBR: 12884, vendorBR: "Mercado Livre",
+                priceUSA: 699.00, vendorUSA: "Amazon USA",
+                unit: "UNIDADE"
             }
         ];
 
@@ -671,14 +716,27 @@
                         <p class="text-xs text-slate-500 mb-6 flex-grow leading-relaxed italic text-left">"${item.desc}"</p>
                         
                         <div class="p-4 bg-slate-900 rounded-xl mb-4 border border-slate-700">
-                            <div class="flex justify-between text-[11px] text-brand-500 font-black uppercase tracking-widest border-b border-white/10 pb-1 mb-2">
+                            <div class="flex justify-between text-[11px] text-brand-500 font-black uppercase tracking-widest border-b border-white/10 pb-1 mb-3">
                                 <span>Preço</span>
                                 <span>Quantidade</span>
                             </div>
-                            <div class="flex justify-between items-center text-white font-black text-[11px]">
-                                <span>R$ ${item.prices.BR}</span>
-                                <span class="uppercase tracking-tighter">${item.unit}</span>
+                            <!-- Linha Brasil -->
+                            <div class="flex justify-between items-center text-white text-[12px] font-black mb-1">
+                                <div class="flex items-center gap-1.5">
+                                    <span title="Brasil">🇧🇷</span>
+                                    <span>${item.priceBR ? 'R$ ' + item.priceBR.toLocaleString('pt-BR') : (item.priceBRLabel || '—')}</span>
+                                </div>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-tighter">${item.unit}</span>
                             </div>
+                            <div class="text-[9px] text-slate-500 mb-2 pl-5">${item.vendorBR}</div>
+                            <!-- Linha EUA -->
+                            <div class="flex justify-between items-center text-slate-300 text-[11px] font-bold border-t border-white/5 pt-2 mt-1">
+                                <div class="flex items-center gap-1.5">
+                                    <span title="EUA">🇺🇸</span>
+                                    <span>${item.priceUSA ? 'US$ ' + item.priceUSA.toFixed(2) + ' → R$ ' + (item.priceUSA * USD_BRL).toLocaleString('pt-BR', {maximumFractionDigits:0}) : item.vendorUSA}</span>
+                                </div>
+                            </div>
+                            <div class="text-[9px] text-slate-500 pl-5">${item.priceUSA ? item.vendorUSA : ''}</div>
                         </div>
 
                         <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 mt-auto text-left">
@@ -690,8 +748,6 @@
                                 <div class="bg-brand-500 h-full" style="width: ${(item.backhaul / 12) * 100}%"></div>
                             </div>
                         </div>
-                        ${item.obs ? `<p class="mt-2 text-[9px] text-slate-400 italic text-left">${item.obs}</p>` : ''}
-                    </div>
                 `;
             });
 
