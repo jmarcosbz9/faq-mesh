@@ -179,7 +179,7 @@
     <header class="bg-slate-900 text-white pt-10 pb-16 px-6 border-b-8 border-brand-500 relative z-30 text-left">
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="inline-flex items-center space-x-2 bg-brand-500/20 border border-brand-500/30 px-3 py-1 rounded mb-4 text-brand-500 font-bold text-xs uppercase tracking-widest">
-                <span>Elaborado em abril de 2026. Mês que vem muda tudo.</span>
+                <span>Elaborado em maio de 2026. Mês que vem muda tudo.</span>
             </div>
             <h1 class="text-4xl md:text-5xl font-black mb-4 leading-none tracking-tight text-white">Rede Doméstica</h1>
             <p class="text-base md:text-lg text-white max-w-4xl leading-relaxed">
@@ -461,6 +461,11 @@
             <h3 class="text-2xl font-black text-slate-900 uppercase tracking-tighter">O que tem no Mercado</h3>
             <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest bg-slate-100 px-3 py-1 rounded italic">Seleção Técnica: Backhaul 4x4 & Wi-Fi 7</span>
         </div>
+        <div class="mb-6 flex justify-start">
+            <span class="inline-flex items-center gap-2 bg-slate-800 text-white text-xs font-semibold px-4 py-2 rounded-full">
+                🗓 Preços pesquisados em maio/2026 · Câmbio R$ 4,92/USD
+            </span>
+        </div>
 
         <section class="mb-12">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -566,7 +571,7 @@
                         Ver comparativo detalhado
                     </button>
                     <span class="text-white text-sm block mt-2 italic">
-                        Preços pesquisados em abril/2026 · Câmbio R$ 5,85/USD
+                        Preços pesquisados em maio/2026 · Câmbio R$ 4,92/USD
                     </span>
                 </div>
             </div>
@@ -655,7 +660,7 @@
     </footer>
 
     <script>
-        const USD_BRL = 5.85; // câmbio abril 2026
+        const USD_BRL = 4.92; // câmbio maio 2026
 
         const routerData = [
             { 
@@ -713,23 +718,32 @@
                 unit: "PAR (2 UNIDADES)"
             },
             { 
-                id: 5, name: "Netgear Orbi 960", region: "EUA", wifi: "Wi-Fi 6E", mimo: "4x4", backhaul: 10.0, price: 9, total: 10.8, 
-                url: "https://www.netgear.com/home/wifi/mesh/rbke963/",
-                img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Netgear_Orbi_960.png",
-                desc: "Referência premium. Banda exclusiva quad-stream dedicada apenas para o backhaul.",
-                priceBR: 14500, vendorBR: "Importado / ML",
-                priceUSA: 699.00, vendorUSA: "Amazon USA (3-pack, renovado)",
+                id: 5, name: "Netgear Orbi 870", region: "EUA", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 9, total: 21.0, 
+                url: "https://www.netgear.com/home/wifi/mesh/rbe873/",
+                img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Netgear_Orbi_870.png",
+                desc: "Referência premium Wi-Fi 7. Tri-band BE21000 com porta WAN 10G e cobertura de até 840m² no trio.",
+                priceBR: null, priceBRLabel: "~R$ 7.500", vendorBR: "Importado / ML",
+                priceUSA: 899.99, vendorUSA: "Amazon USA (3-pack, promo)",
                 unit: "TRIO (3 UNIDADES)"
             },
             { 
-                id: 8, name: "TP-Link Archer BE900", region: "Brasil", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 9, total: 24.0, 
-                url: "https://www.tp-link.com/us/home-networking/wifi-router/archer-be900/",
-                img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Archer_BE900_WiFi_7_Router.png",
-                desc: "Futurista e poderoso. Quad-band Wi-Fi 7, tela LED touch, suporte total a 320MHz.",
-                priceBR: 12884, vendorBR: "Mercado Livre",
-                priceUSA: 699.00, vendorUSA: "Amazon USA",
-                unit: "UNIDADE"
-            }
+                id: 13, name: "TP-Link Deco BE63", region: "Brasil", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 5, total: 10.0, 
+                url: "https://www.tp-link.com/br/home-networking/deco/deco-be63/",
+                img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE63.jpg",
+                desc: "Melhor avaliado de 2026 pelo Wirecutter. 4 portas 2.5G por nó, Wi-Fi 7 tri-band e MLO a preço competitivo.",
+                priceBR: null, priceBRLabel: "~R$ 1.800", vendorBR: "Chegando ao Brasil",
+                priceUSA: 269.99, vendorUSA: "Amazon USA (2-pack)",
+                unit: "PAR (2 UNIDADES)"
+            },
+            { 
+                id: 14, name: "ASUS ZenWiFi BT10", region: "EUA", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 8, total: 18.0, 
+                url: "https://www.asus.com/pt/networking-iot-servers/whole-home-mesh-systems/asus-zenwifi/asus-zenwifi-bt10/",
+                img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Asus_ZenWiFi_BT10.png",
+                desc: "Top premium Wi-Fi 7. Dual 10G por nó, MLO, AiMesh AI-powered. Melhor que o Orbi 870 para casas cabeadas.",
+                priceBR: null, priceBRLabel: "~R$ 4.900", vendorBR: "Importado",
+                priceUSA: 500.00, vendorUSA: "Amazon USA (2-pack, promo)",
+                unit: "PAR (2 UNIDADES)"
+            },
         ];
 
         let pChart, cChart;
