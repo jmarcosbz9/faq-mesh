@@ -131,15 +131,12 @@
             width: 100%;
             max-height: calc(90vh - 90px);
             border-radius: 8px;
-            cursor: grab;
             display: flex;
             align-items: flex-start;
             justify-content: center;
             position: relative;
         }
-        #img-lightbox .lb-img-wrap.grabbing {
-            cursor: grabbing;
-        }
+        #img-lightbox .lb-img-wrap.grabbing { cursor: grabbing; }
         #img-lightbox img {
             max-width: 100%;
             height: auto;
@@ -202,7 +199,6 @@
                     <h3 class="font-bold text-rose-800 text-xl mb-4 flex items-center">
                         <span class="w-8 h-8 rounded-full bg-rose-400 text-white flex items-center justify-center mr-3">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
-                                <!-- hexágono mesh com diagonais -->
                                 <polygon points="12,2 20,7 20,17 12,22 4,17 4,7" stroke="currentColor" fill="none"/>
                                 <line x1="12" y1="2"  x2="20" y2="17"/>
                                 <line x1="12" y1="2"  x2="4"  y2="17"/>
@@ -221,66 +217,40 @@
                         </div>
                         <div>
                             <style>
-                                .cmesh-caption {
-                                    margin-top: 10px;
-                                    padding: 8px 14px;
-                                    background: rgba(255,228,230,0.6);
-                                    border-radius: 8px;
-                                    border: 0.5px solid rgba(251,113,133,0.3);
-                                    font-size: 13px;
-                                    color: #881337;
-                                    min-height: 38px;
-                                    display: flex;
-                                    align-items: center;
-                                    gap: 9px;
-                                }
+                                .cmesh-caption { margin-top: 10px; padding: 8px 14px; background: rgba(255,228,230,0.6); border-radius: 8px; border: 0.5px solid rgba(251,113,133,0.3); font-size: 13px; color: #881337; min-height: 38px; display: flex; align-items: center; gap: 9px; }
                                 .cmesh-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; transition: background 0.4s; }
-                                @keyframes cmeshPulse {
-                                    0%   { r: 22px; opacity: 0.6; }
-                                    100% { r: 60px; opacity: 0;   }
-                                }
+                                @keyframes cmeshPulse { 0% { r: 22px; opacity: 0.6; } 100% { r: 60px; opacity: 0; } }
                                 .cmpulse { animation: cmeshPulse 1.6s ease-out infinite; }
                             </style>
                             <svg id="cmeshSvg" width="100%" viewBox="0 0 440 220" role="img">
                                 <title>Passagem de bastão entre roteadores mesh</title>
-                                <desc>Pessoa caminha da sala ao escritório; cada roteador assume automaticamente.</desc>
-                                <!-- fundo preto geral -->
                                 <rect x="10" y="12" width="420" height="188" rx="5" fill="#0f172a"/>
-                                <!-- paredes (brancas) -->
                                 <rect x="10" y="12" width="420" height="188" rx="5" fill="none" stroke="white" stroke-width="1.5"/>
                                 <line x1="157" y1="12" x2="157" y2="200" stroke="white" stroke-width="1.5"/>
                                 <line x1="304" y1="12" x2="304" y2="200" stroke="white" stroke-width="1.5"/>
-                                <!-- portas (aberturas no fundo preto) -->
                                 <line x1="157" y1="95" x2="157" y2="135" stroke="#0f172a" stroke-width="4"/>
                                 <line x1="304" y1="95" x2="304" y2="135" stroke="#0f172a" stroke-width="4"/>
-                                <!-- labels cômodos -->
                                 <text x="83"  y="192" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.4)">Sala</text>
                                 <text x="230" y="192" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.4)">Quarto</text>
                                 <text x="372" y="192" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.4)">Escritório</text>
-                                <!-- coberturas Wi-Fi (pastel mantido) -->
                                 <circle cx="83"  cy="110" r="55" fill="#7BB8E8" fill-opacity="0.12" stroke="#7BB8E8" stroke-width="0.8" stroke-opacity="0.4"/>
                                 <circle cx="230" cy="110" r="55" fill="#6DD4AE" fill-opacity="0.12" stroke="#6DD4AE" stroke-width="0.8" stroke-opacity="0.4"/>
                                 <circle cx="372" cy="110" r="55" fill="#F4956A" fill-opacity="0.12" stroke="#F4956A" stroke-width="0.8" stroke-opacity="0.4"/>
-                                <!-- pulsos -->
                                 <circle id="cmpA" cx="83"  cy="46" r="22" fill="none" stroke="#7BB8E8" stroke-width="1.5" class="cmpulse"/>
                                 <circle id="cmpB" cx="230" cy="46" r="22" fill="none" stroke="#6DD4AE" stroke-width="1.5" class="cmpulse" style="animation-play-state:paused;opacity:0"/>
                                 <circle id="cmpC" cx="372" cy="46" r="22" fill="none" stroke="#F4956A" stroke-width="1.5" class="cmpulse" style="animation-play-state:paused;opacity:0"/>
-                                <!-- roteadores: fundo branco, outline e texto coloridos -->
                                 <rect x="61"  y="28" width="44" height="36" rx="5" fill="white" stroke="#7BB8E8" stroke-width="2"/>
-                                <text x="83"  y="42" text-anchor="middle" font-size="9"  fill="#7BB8E8" font-weight="500">Router</text>
+                                <text x="83"  y="42" text-anchor="middle" font-size="9" fill="#7BB8E8" font-weight="500">Router</text>
                                 <text x="83"  y="55" text-anchor="middle" font-size="13" fill="#7BB8E8" font-weight="700">A</text>
                                 <rect x="208" y="28" width="44" height="36" rx="5" fill="white" stroke="#6DD4AE" stroke-width="2"/>
-                                <text x="230" y="42" text-anchor="middle" font-size="9"  fill="#6DD4AE" font-weight="500">Router</text>
+                                <text x="230" y="42" text-anchor="middle" font-size="9" fill="#6DD4AE" font-weight="500">Router</text>
                                 <text x="230" y="55" text-anchor="middle" font-size="13" fill="#6DD4AE" font-weight="700">B</text>
                                 <rect x="350" y="28" width="44" height="36" rx="5" fill="white" stroke="#F4956A" stroke-width="2"/>
-                                <text x="372" y="42" text-anchor="middle" font-size="9"  fill="#F4956A" font-weight="500">Router</text>
+                                <text x="372" y="42" text-anchor="middle" font-size="9" fill="#F4956A" font-weight="500">Router</text>
                                 <text x="372" y="55" text-anchor="middle" font-size="13" fill="#F4956A" font-weight="700">C</text>
-                                <!-- backbone dashed -->
                                 <line x1="105" y1="46" x2="208" y2="46" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,3"/>
                                 <line x1="252" y1="46" x2="350" y2="46" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,3"/>
-                                <!-- conexão ativa -->
                                 <line id="cmConnLine" x1="83" y1="112" x2="83" y2="64" stroke="#7BB8E8" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.9"/>
-                                <!-- pessoa -->
                                 <g id="cmPerson" transform="translate(83,112)">
                                     <circle r="13" fill="#7F77DD"/>
                                     <circle cy="-5" r="4.5" fill="white"/>
@@ -310,46 +280,23 @@
                                     { x:372, y:112, rx:372, ry:64, color:'#F4956A', ai:2, msg:'No escritório — <strong>Roteador C</strong> entrega sinal pleno.' },
                                     { x:372, y:112, rx:372, ry:64, color:'#F4956A', ai:2, msg:'Sem queda, sem troca manual. Isso é <strong>mesh</strong>.' }
                                 ];
-                                let step = 0;
-                                const DUR = 1300;
+                                let step = 0; const DUR = 1300;
                                 function lerp(a,b,t){ return a+(b-a)*t; }
                                 function apply(i){
-                                    const s = stops[i];
-                                    conn.setAttribute('stroke', s.color);
-                                    dot.style.background = s.color;
-                                    cap.innerHTML = s.msg;
-                                    pp.forEach((p,j)=>{
-                                        p.style.animationPlayState = j===s.ai ? 'running' : 'paused';
-                                        p.style.opacity = j===s.ai ? '1' : '0';
-                                    });
+                                    const s = stops[i]; conn.setAttribute('stroke', s.color); dot.style.background = s.color; cap.innerHTML = s.msg;
+                                    pp.forEach((p,j)=>{ p.style.animationPlayState = j===s.ai ? 'running' : 'paused'; p.style.opacity = j===s.ai ? '1' : '0'; });
                                 }
                                 function animate(from, to, done){
                                     const t0 = performance.now();
                                     (function frame(now){
-                                        const t = Math.min((now-t0)/DUR, 1);
-                                        const e = t<0.5 ? 2*t*t : -1+(4-2*t)*t;
-                                        const x  = Math.round(lerp(from.x,  to.x,  e));
-                                        const y  = Math.round(lerp(from.y,  to.y,  e));
-                                        const rx = Math.round(lerp(from.rx, to.rx, e));
-                                        const ry = Math.round(lerp(from.ry, to.ry, e));
-                                        person.setAttribute('transform',`translate(${x},${y})`);
-                                        conn.setAttribute('x1',x); conn.setAttribute('y1',y);
-                                        conn.setAttribute('x2',rx); conn.setAttribute('y2',ry);
+                                        const t = Math.min((now-t0)/DUR, 1); const e = t<0.5 ? 2*t*t : -1+(4-2*t)*t;
+                                        const x=Math.round(lerp(from.x,to.x,e)), y=Math.round(lerp(from.y,to.y,e)), rx=Math.round(lerp(from.rx,to.rx,e)), ry=Math.round(lerp(from.ry,to.ry,e));
+                                        person.setAttribute('transform',`translate(${x},${y})`); conn.setAttribute('x1',x); conn.setAttribute('y1',y); conn.setAttribute('x2',rx); conn.setAttribute('y2',ry);
                                         t < 1 ? requestAnimationFrame(frame) : done();
                                     })(t0);
                                 }
-                                function loop(){
-                                    apply(step);
-                                    const next = (step+1) % stops.length;
-                                    const pause = step === stops.length-1 ? 2600 : 550;
-                                    setTimeout(()=>{
-                                        animate(stops[step], stops[next], ()=>{ step=next; loop(); });
-                                    }, pause);
-                                }
-                                apply(0);
-                                person.setAttribute('transform',`translate(${stops[0].x},${stops[0].y})`);
-                                conn.setAttribute('x1',stops[0].x); conn.setAttribute('y1',stops[0].y);
-                                conn.setAttribute('x2',stops[0].rx); conn.setAttribute('y2',stops[0].ry);
+                                function loop(){ apply(step); const next=(step+1)%stops.length; const pause=step===stops.length-1?2600:550; setTimeout(()=>{ animate(stops[step],stops[next],()=>{ step=next; loop(); }); }, pause); }
+                                apply(0); person.setAttribute('transform',`translate(${stops[0].x},${stops[0].y})`); conn.setAttribute('x1',stops[0].x); conn.setAttribute('y1',stops[0].y); conn.setAttribute('x2',stops[0].rx); conn.setAttribute('y2',stops[0].ry);
                                 setTimeout(loop, 1200);
                             })();
                             </script>
@@ -361,11 +308,8 @@
                     <h3 class="font-bold text-emerald-800 text-xl mb-4 flex items-center">
                         <span class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center mr-3">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                                <rect x="2" y="14" width="6" height="4" rx="1"></rect>
-                                <rect x="16" y="14" width="6" height="4" rx="1"></rect>
-                                <path d="M8 16h8" stroke-dasharray="2 2"></path>
-                                <path d="M12 16c0-4 2-6 5-6"></path>
-                                <path d="M12 16c0-4-2-6-5-6"></path>
+                                <rect x="2" y="14" width="6" height="4" rx="1"></rect><rect x="16" y="14" width="6" height="4" rx="1"></rect>
+                                <path d="M8 16h8" stroke-dasharray="2 2"></path><path d="M12 16c0-4 2-6 5-6"></path><path d="M12 16c0-4-2-6-5-6"></path>
                             </svg>
                         </span>
                         Backhaul Wireless
@@ -383,9 +327,7 @@
                         <span class="w-8 h-8 rounded-full bg-orange-200 text-orange-800 flex items-center justify-center mr-3 text-sm font-black tracking-tighter">TRI</span>
                         Tri-Band vs Dual-Band
                     </h3>
-                    <p class="text-base text-slate-700 leading-relaxed">
-                        Em sistemas Dual-Band, a comunicação entre os roteadores (Backhaul) compete com os seus aparelhos. No Tri-Band, existe uma via exclusiva para os roteadores, eliminando gargalos no Nó Secundário.
-                    </p>
+                    <p class="text-base text-slate-700 leading-relaxed">Em sistemas Dual-Band, a comunicação entre os roteadores (Backhaul) compete com os seus aparelhos. No Tri-Band, existe uma via exclusiva para os roteadores, eliminando gargalos no Nó Secundário.</p>
                 </div>
 
                 <div class="p-8 bg-brand-50 rounded-2xl border border-brand-100 shadow-sm">
@@ -393,9 +335,7 @@
                         <span class="w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center mr-3 text-sm font-black">4x4</span>
                         Diversidade MIMO 4x4
                     </h3>
-                    <p class="text-base text-brand-900/80 leading-relaxed">
-                        Paredes e portas são obstáculos para as frequências de 5 e 6GHz, mas quatro antenas tornam a conexão mais estável do que com duas e oferecem maior vazão de dados entre os nós da rede.
-                    </p>
+                    <p class="text-base text-brand-900/80 leading-relaxed">Paredes e portas são obstáculos para as frequências de 5 e 6GHz, mas quatro antenas tornam a conexão mais estável do que com duas e oferecem maior vazão de dados entre os nós da rede.</p>
                 </div>
 
                 <div class="p-8 bg-blue-50 rounded-2xl border border-blue-100 shadow-sm">
@@ -403,28 +343,13 @@
                         <span class="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center mr-3 text-sm font-black">MLO</span>
                         Multi-Link Operation
                     </h3>
-                    <p class="text-base text-blue-900/80 leading-relaxed">
-                        Agregação na 
-                        <span class="term-tooltip font-bold">
-                            camada MAC
-                            <span class="term-content">
-                                <strong>Media Access Control:</strong> Subcamada do Link de Dados que gerencia o endereçamento físico. No Wi-Fi 7, ela coordena o MLO para enviar dados por várias bandas ao mesmo tempo.
-                            </span>
-                        </span>: 
-                        Transmite pacotes por múltiplas bandas simultaneamente, atenuando a latência por congestionamento.
-                    </p>
+                    <p class="text-base text-blue-900/80 leading-relaxed">Agregação na <span class="term-tooltip font-bold">camada MAC<span class="term-content"><strong>Media Access Control:</strong> Subcamada do Link de Dados que gerencia o endereçamento físico. No Wi-Fi 7, ela coordena o MLO para enviar dados por várias bandas ao mesmo tempo.</span></span>: Transmite pacotes por múltiplas bandas simultaneamente, atenuando a latência por congestionamento.</p>
                 </div>
 
-                <!-- Sopa de Letrinhas -->
                 <div class="p-8 bg-purple-50 rounded-2xl border border-purple-100 shadow-sm">
                     <h3 class="font-bold text-purple-700 text-xl mb-6 flex items-center">
                         <span class="w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center mr-3">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <circle cx="12" cy="18" r="2"></circle>
-                                <path d="M12 14c-1.6 0-3-.6-4.1-1.6l-1.4 1.4C8.1 15.3 10 16 12 16s3.9-.7 5.5-2.2l-1.4-1.4c-1.1 1-2.5 1.6-4.1 1.6z"></path>
-                                <path d="M12 10c-2.7 0-5.2 1.1-7.1 2.9L3.5 11.5c2.3-2.3 5.5-3.5 8.5-3.5s6.2 1.2 8.5 3.5l-1.4 1.4c-1.9-1.8-4.4-2.9-7.1-2.9z"></path>
-                                <path d="M12 6c-3.8 0-7.3 1.5-9.9 4l-1.4-1.4C3.6 5.8 7.6 4 12 4s8.4 1.8 11.3 4.6l-1.4 1.4C19.3 7.5 15.8 6 12 6z"></path>
-                            </svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="18" r="2"></circle><path d="M12 14c-1.6 0-3-.6-4.1-1.6l-1.4 1.4C8.1 15.3 10 16 12 16s3.9-.7 5.5-2.2l-1.4-1.4c-1.1 1-2.5 1.6-4.1 1.6z"></path><path d="M12 10c-2.7 0-5.2 1.1-7.1 2.9L3.5 11.5c2.3-2.3 5.5-3.5 8.5-3.5s6.2 1.2 8.5 3.5l-1.4 1.4c-1.9-1.8-4.4-2.9-7.1-2.9z"></path><path d="M12 6c-3.8 0-7.3 1.5-9.9 4l-1.4-1.4C3.6 5.8 7.6 4 12 4s8.4 1.8 11.3 4.6l-1.4 1.4C19.3 7.5 15.8 6 12 6z"></path></svg>
                         </span>
                         Evolução do Wi-Fi: sopa de letrinhas
                     </h3>
@@ -503,9 +428,9 @@
                     <!-- Card 2: Aguardar -->
                     <div class="bg-slate-800/60 rounded-2xl p-6 border border-amber-500/40">
                         <h4 class="text-amber-400 font-bold uppercase text-xs tracking-widest mb-3">⏳ Aguardar antes de comprar</h4>
-                        <p class="text-lg font-black text-white mb-3">TP-Link Deco BE65 Pro</p>
+                        <p class="text-lg font-black text-white mb-3">TP-Link Deco BE63</p>
                         <p class="text-sm text-slate-400 leading-relaxed">
-                            A novidade de 2026: <strong class="text-white">MIMO 4x4 + Wi-Fi 7 + MLO</strong> a US$ 299/par nos EUA — hardware equivalente ao BE75 por menos da metade do preço. Ainda sem data de chegada ao Brasil, mas vale monitorar.
+                            O melhor avaliado de 2026 pelo Wirecutter: <strong class="text-white">Wi-Fi 7 + MLO + 4 portas 2.5G por nó</strong> a US$ 269/par. Ainda sem data de chegada ao Brasil, mas vale monitorar.
                         </p>
                     </div>
 
@@ -520,33 +445,37 @@
                 </div>
 
                 <div id="detailed-comparison" class="hidden mt-4 pt-8 border-t border-slate-800">
-                    <h3 class="text-xl font-bold mb-6 text-brand-500 uppercase">Comparativo: Huawei Mesh 7 · Deco BE65 Pro · Deco BE75</h3>
+                    <h3 class="text-xl font-bold mb-6 text-brand-500 uppercase">Comparativo: Huawei Mesh 7 · Deco BE63 · Deco BE75 · ZenWiFi BT10</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left text-sm">
                             <thead class="bg-slate-800/80 text-brand-500 uppercase text-[10px] tracking-widest">
                                 <tr>
                                     <th class="p-4 border-b border-slate-700">Recurso</th>
                                     <th class="p-4 border-b border-slate-700">Huawei Mesh 7</th>
-                                    <th class="p-4 border-b border-slate-700 text-amber-400">Deco BE65 Pro</th>
+                                    <th class="p-4 border-b border-slate-700 text-amber-400">Deco BE63</th>
                                     <th class="p-4 border-b border-slate-700">Deco BE75</th>
+                                    <th class="p-4 border-b border-slate-700 text-purple-400">ZenWiFi BT10</th>
                                 </tr>
                             </thead>
                             <tbody class="text-slate-300">
                                 <tr>
                                     <td class="p-4 border-b border-slate-800 font-bold">Preço BR</td>
                                     <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">R$ 572 (unid)</td>
-                                    <td class="p-4 border-b border-slate-800 text-amber-400 font-bold">~R$ 2.900 (par) — em breve</td>
-                                    <td class="p-4 border-b border-slate-800 text-slate-300 font-bold">~R$ 5.400 (par)</td>
+                                    <td class="p-4 border-b border-slate-800 text-amber-400 font-bold">~R$ 1.800 (par) — em breve</td>
+                                    <td class="p-4 border-b border-slate-800 font-bold">~R$ 5.400 (par)</td>
+                                    <td class="p-4 border-b border-slate-800 text-purple-400 font-bold">~R$ 4.900 (par)*<br><span class="text-slate-500 font-normal text-xs">importado</span></td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 border-b border-slate-800 font-bold">MIMO</td>
-                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4 (Físico)</td>
-                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4 (Físico)</td>
-                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4 (Físico)</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4</td>
+                                    <td class="p-4 border-b border-slate-800">2x2</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4x4</td>
                                 </tr>
                                 <tr>
                                     <td class="p-4 border-b border-slate-800 font-bold">Wi-Fi</td>
                                     <td class="p-4 border-b border-slate-800">6 Plus</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">7 (MLO)</td>
                                     <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">7 (MLO)</td>
                                     <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">7 (MLO)</td>
                                 </tr>
@@ -554,25 +483,33 @@
                                     <td class="p-4 border-b border-slate-800 font-bold">Backhaul</td>
                                     <td class="p-4 border-b border-slate-800">4.8 Gbps</td>
                                     <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">5.8 Gbps</td>
-                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-black italic">10 Gbps (via 6GHz)</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-black italic">10 Gbps</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-black italic">11.5 Gbps</td>
                                 </tr>
                                 <tr>
-                                    <td class="p-4 border-b border-slate-800 font-bold">Porta máx.</td>
-                                    <td class="p-4 border-b border-slate-800">1G</td>
-                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">2.5G (×3 por nó)</td>
-                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-black italic">10G SFP+</td>
+                                    <td class="p-4 border-b border-slate-800 font-bold">Nº de portas</td>
+                                    <td class="p-4 border-b border-slate-800">3 portas</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4 portas por nó</td>
+                                    <td class="p-4 border-b border-slate-800">3 portas</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">3 portas por nó</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border-b border-slate-800 font-bold">Velocidade das portas</td>
+                                    <td class="p-4 border-b border-slate-800">1 GbE</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-bold">4× 2.5 GbE</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-black italic">1× 10G SFP+ · 2× 2.5 GbE</td>
+                                    <td class="p-4 border-b border-slate-800 text-brand-500 font-black italic">2× 10 GbE · 1× 2.5 GbE</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                    <p class="text-slate-500 text-xs mt-4 italic">* Preço do ZenWiFi BT10 em reais calculado sobre o valor em dólar, sem incluir o imposto de importação de 60%.</p>
                 </div>
 
                 <div class="mt-10 pt-8 border-t border-slate-800 flex flex-col items-center gap-4 text-center">
                     <button id="toggle-comparison" class="bg-brand-500 hover:bg-brand-600 text-slate-900 font-black px-8 py-3 rounded-full text-xs uppercase tracking-widest transition-all">
                         Ver comparativo detalhado
                     </button>
-                    <span class="text-white text-sm block mt-2 italic">
-                    </span>
                 </div>
             </div>
         </section>
@@ -594,18 +531,9 @@
                             <li>No Rio, a oferta de internet banda larga limita-se a Claro e VIVO. Mesmo que apareça no seu escaninho de correspondência um flyer de alguma prestadora de menor porte com preço mais barato e velocidade maior, não é recomendável.</li>
                             <li>Entre Claro e VIVO não existe melhor; existe a menos pior. E isso vai depender do seu edifício; ele pode ser melhor atendido pela Claro e o prédio vizinho pela VIVO (ou vice-versa). Você não mora na Escandinávia.</li>
                             <li>Caso seu apartamento seja atendido por ambas, vale negociar: <em>"sua concorrente me ofereceu 500Mbps por R$ X. Você me fornece 600Mbps por esses R$ X ou 500Mbps por menos?"</em>.</li>
-                            <li>
-                                Com relação à Claro (antiga NET-Virtua) cabe uma observação: ainda atende muitos edifícios com uma rede híbrida; isto é; o sinal sai da estação em fibra e, à medida que vai sendo feita a distribuição, chega em sua casa em 
-                                <span class="term-tooltip font-bold text-brand-500">cabo coaxial
-                                    <span class="term-content">Essa infraestrutura se chama HFC — Hybrid Fiber Coaxial</span>
-                                </span>.<br>
-                                Ela está migrando para infraestrutura 
-                                <span class="term-tooltip font-bold text-brand-500">100% fibra
-                                    <span class="term-content">FTTH — Fiber To The Home</span>
-                                </span>. Você precisa ir a uma loja da Claro (não vá a franqueada) para saber. Pergunte se seu endereço é atendido por HFC ou já é 
-                                <span class="term-tooltip font-bold text-brand-500">"GPON"
-                                    <span class="term-content">GPON significa Gigabit Passive Optical Network e é como a Claro chama a rede 100% fibra.</span>
-                                </span>.<br><strong>Seu serviço de internet residencial deve ser 100% fibra. Rede híbrida NÃO é uma opção.</strong>
+                            <li>Com relação à Claro (antiga NET-Virtua) cabe uma observação: ainda atende muitos edifícios com uma rede híbrida; isto é; o sinal sai da estação em fibra e, à medida que vai sendo feita a distribuição, chega em sua casa em 
+                                <span class="term-tooltip font-bold text-brand-500">cabo coaxial<span class="term-content">Essa infraestrutura se chama HFC — Hybrid Fiber Coaxial</span></span>.<br>
+                                Ela está migrando para infraestrutura <span class="term-tooltip font-bold text-brand-500">100% fibra<span class="term-content">FTTH — Fiber To The Home</span></span>. Você precisa ir a uma loja da Claro (não vá a franqueada) para saber. Pergunte se seu endereço é atendido por HFC ou já é <span class="term-tooltip font-bold text-brand-500">"GPON"<span class="term-content">GPON significa Gigabit Passive Optical Network e é como a Claro chama a rede 100% fibra.</span></span>.<br><strong>Seu serviço de internet residencial deve ser 100% fibra. Rede híbrida NÃO é uma opção.</strong>
                             </li>
                         </ul>
                     </div>
@@ -617,12 +545,8 @@
                     <div class="text-sm leading-relaxed text-white space-y-3">
                         <p>Refere-se ao arranjo dos nós:</p>
                         <ul class="list-disc pl-4 space-y-2">
-                            <li>Na <div class="footer-img-popup">Topologia Estrela<div class="footer-img-content">
-                                <img src="https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/star_topology.png" alt="Topologia Estrela" class="rounded-lg">
-                            </div></div>, os satélites falam direto com o Nó Principal (Prós: menor latência e maior estabilidade; Contra: alcance limitado ao centro).</li>
-                            <li>Na <div class="footer-img-popup">Topologia em Cadeia (Daisy Chain)<div class="footer-img-content">
-                                <img src="https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/daisy_chain_topology.png" alt="Topologia em Cadeia" class="rounded-lg">
-                            </div></div>, um nó se liga ao outro em fila (Pró: vence grandes distâncias lineares; Contra: cada "salto" extra reduz a velocidade e se um nó cai, derruba os seguintes).</li>
+                            <li>Na <div class="footer-img-popup">Topologia Estrela<div class="footer-img-content"><img src="https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/star_topology.png" alt="Topologia Estrela" class="rounded-lg"></div></div>, os satélites falam direto com o Nó Principal (Prós: menor latência e maior estabilidade; Contra: alcance limitado ao centro).</li>
+                            <li>Na <div class="footer-img-popup">Topologia em Cadeia (Daisy Chain)<div class="footer-img-content"><img src="https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/daisy_chain_topology.png" alt="Topologia em Cadeia" class="rounded-lg"></div></div>, um nó se liga ao outro em fila (Pró: vence grandes distâncias lineares; Contra: cada "salto" extra reduz a velocidade e se um nó cai, derruba os seguintes).</li>
                             <li>Nas figuras acima, na Topologia Estrela os roteadores estão ligados por cabos de rede e a Daisy Chain por um backhaul wireless. Mas poderia ser o contrário; o método de conexão independe da topologia.<br>Mas lembre-se: qualquer que seja a topologia mais adequada ao seu ambiente, a interligação por cabo será sempre preferível.</li>
                         </ul>
                     </div>
@@ -635,20 +559,8 @@
                         <p>É o cérebro da rede:</p>
                         <ul class="list-disc pl-4 space-y-2">
                             <li>Gerencia o tráfego, decidindo o melhor caminho para o destino.</li>
-                            <li>O roteador central 
-                                <span class="term-tooltip text-brand-500 font-bold">distribui os endereços IPs
-                                    <span class="term-content">
-                                        <strong>DHCP (Dynamic Host Protocol)</strong> é o serviço que faz a distribuição automática de configurações de rede para os aparelhos. É como a recepção de um hotel entregando o número do quarto e dizendo por qual corredor você passa e onde fica a saída.
-                                    </span>
-                                </span> para os dispositivos.
-                            </li>
-                            <li>Separa a sua rede local da "Infernet", permitindo configurações de segurança, tais como bloqueio de sites maliciosos, ataques de hackers, 
-                                <span class="term-tooltip font-bold text-brand-500">controle parental
-                                    <span class="term-content">
-                                        O seu filho(a) passa a madrugada em claro no Instagram ou jogando LoL? Bloqueie o acesso dele(a) à internet a partir das 22 horas.
-                                    </span>
-                                </span>. Você já ouviu falar nisso: é o Firewall.
-                            </li>
+                            <li>O roteador central <span class="term-tooltip text-brand-500 font-bold">distribui os endereços IPs<span class="term-content"><strong>DHCP (Dynamic Host Protocol)</strong> é o serviço que faz a distribuição automática de configurações de rede para os aparelhos. É como a recepção de um hotel entregando o número do quarto e dizendo por qual corredor você passa e onde fica a saída.</span></span> para os dispositivos.</li>
+                            <li>Separa a sua rede local da "Infernet", permitindo configurações de segurança, tais como bloqueio de sites maliciosos, ataques de hackers, <span class="term-tooltip font-bold text-brand-500">controle parental<span class="term-content">O seu filho(a) passa a madrugada em claro no Instagram ou jogando LoL? Bloqueie o acesso dele(a) à internet a partir das 22 horas.</span></span>. Você já ouviu falar nisso: é o Firewall.</li>
                             <li>Receba o combo visitas e a pergunta "Qual é a senha do Wi-Fi?". Então crie uma rede isolada para elas. Afinal, os seus convidados não devem configurar a sua Alexa nem a impressora da casa.</li>
                             <li>Priorização de tráfego: caso o PlayStation esteja monopolizando toda a banda contratada com a operadora e prejudicando a sua videoconferência, estabeleça uma velocidade máxima para o videogame: isso se chama <strong>QoS (Quality of Service)</strong>.</li>
                         </ul>
@@ -664,85 +576,85 @@
 
         const routerData = [
             { 
-                id: 1, name: "TP-Link Deco BE85", region: "Brasil", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 10, total: 22.0, 
+                id: 1, name: "TP-Link Deco BE85", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 10, total: 22.0, 
                 url: "https://www.tp-link.com/br/home-networking/deco/deco-be85/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE85.png",
                 desc: "Top performance. Hardware 4x4 total para interligar os nós com 10Gbps reais.",
                 priceBR: null, priceBRLabel: "Em breve", vendorBR: "TP-Link BR",
                 priceUSA: 449.99, vendorUSA: "Best Buy (3-pack)",
-                unit: "PAR"
+                unit: "PAR", ports: "2× 2.5 GbE · 1× 10G SFP+"
             },
             { 
-                id: 10, name: "TP-Link Deco BE75", region: "Brasil", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 8, total: 17.0, 
+                id: 10, name: "TP-Link Deco BE75", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 8, total: 17.0, 
                 url: "https://www.tp-link.com/pt/home-networking/deco/deco-be75/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE75.jpg",
                 desc: "Vantagens: Wi-Fi 7 Tri-Band, MLO e antenas 4x4. Longevidade tecnológica garantida.",
                 priceBR: 5400, vendorBR: "Mercado Livre",
                 priceUSA: 399.99, vendorUSA: "Amazon USA (2-pack)",
-                unit: "PAR"
+                unit: "PAR", ports: "2× 2.5 GbE · 1× 10G SFP+"
             },
             { 
-                id: 3, name: "Huawei WiFi Mesh 7", region: "Brasil", wifi: "Wi-Fi 6 Plus", mimo: "4x4", backhaul: 4.8, price: 1, total: 6.6, 
+                id: 3, name: "Huawei WiFi Mesh 7", wifi: "Wi-Fi 6 Plus", mimo: "4x4", backhaul: 4.8, price: 1, total: 6.6, 
                 url: "https://consumer.huawei.com/br/routers/wifi-mesh7/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Huawei_AX6600_Mesh_7.PNG",
                 desc: "Focado em penetração de sinal em alvenaria. Ótimo custo-benefício 4x4 no Brasil.",
                 priceBR: 572, vendorBR: "Mercado Livre",
-                priceUSA: null, priceBRLabel: null, vendorUSA: "Não disponível nos EUA",
-                unit: "UNIDADE"
+                priceUSA: null, vendorUSA: "Não disponível nos EUA",
+                unit: "UNIDADE", ports: "3× 1 GbE"
             },
             { 
-                id: 11, name: "Acer Predator Connect T7", region: "Brasil", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 2, total: 10.7, 
+                id: 11, name: "Acer Predator Connect T7", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 2, total: 10.7, 
                 url: "https://www.acer.com/br-pt/predator/networking/wi-fi/predator-connect-t7-wifi-7-mesh-router/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/acer_predator.png",
                 desc: "Focado em gamers. Traz o Intel Killer Prioritization Engine para latência mínima.",
                 priceBR: 759, vendorBR: "Amazon BR",
                 priceUSA: 149.99, vendorUSA: "Amazon USA",
-                unit: "UNIDADE"
+                unit: "UNIDADE", ports: "1× 2.5 GbE · 3× 1 GbE"
             },
             { 
-                id: 4, name: "TP-Link Deco BE65", region: "Brasil", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 6, total: 11.0, 
+                id: 4, name: "TP-Link Deco BE65", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 6, total: 11.0, 
                 url: "https://www.tp-link.com/br/home-networking/deco/deco-be65/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE65.png",
                 desc: "Porta de entrada para Wi-Fi 7. 2x2 com MLO para compensar a falta de antenas extras.",
                 priceBR: 2899, vendorBR: "Mercado Livre",
                 priceUSA: 179.99, vendorUSA: "Amazon USA (2-pack)",
-                unit: "PAR"
+                unit: "PAR", ports: "1× 2.5 GbE · 2× 1 GbE"
             },
             { 
-                id: 12, name: "TP-Link Deco BE65 Pro", region: "Brasil", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 5.8, price: 5, total: 11.0, 
+                id: 12, name: "TP-Link Deco BE65 Pro", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 5.8, price: 5, total: 11.0, 
                 url: "https://www.tp-link.com/br/home-networking/deco/deco-be65-pro/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/deco_BE65_Pro.png",
-                desc: "O melhor custo-benefício Wi-Fi 7 de 2026. 4x4 MIMO, três portas 2.5G por nó, MLO e design compacto elegante.",
+                desc: "MIMO 4x4, três portas 2.5G por nó, MLO e design compacto elegante.",
                 priceBR: null, priceBRLabel: "~R$ 2.900", vendorBR: "Chegando ao Brasil",
                 priceUSA: 299.00, vendorUSA: "Amazon USA (2-pack)",
-                unit: "PAR"
+                unit: "PAR", ports: "3× 2.5 GbE"
             },
             { 
-                id: 5, name: "Netgear Orbi 870", region: "EUA", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 9, total: 21.0, 
+                id: 5, name: "Netgear Orbi 870", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 9, total: 21.0, 
                 url: "https://www.netgear.com/home/wifi/mesh/rbe873/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Netgear_Orbi_870.png",
                 desc: "Referência premium Wi-Fi 7. Tri-band BE21000 com porta WAN 10G e cobertura de até 840m² no trio.",
                 priceBR: null, priceBRLabel: "~R$ 7.500", vendorBR: "Importado / ML",
                 priceUSA: 899.99, vendorUSA: "Amazon USA (3-pack, promo)",
-                unit: "TRIO"
+                unit: "TRIO", ports: "1× 10 GbE · 3× 2.5 GbE"
             },
             { 
-                id: 13, name: "TP-Link Deco BE63", region: "Brasil", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 5, total: 10.0, 
+                id: 13, name: "TP-Link Deco BE63", wifi: "Wi-Fi 7", mimo: "2x2", backhaul: 5.8, price: 5, total: 10.0, 
                 url: "https://www.tp-link.com/br/home-networking/deco/deco-be63/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Deco_BE63.jpg",
                 desc: "Melhor avaliado de 2026 pelo Wirecutter. 4 portas 2.5G por nó, Wi-Fi 7 tri-band e MLO a preço competitivo.",
                 priceBR: null, priceBRLabel: "~R$ 1.800", vendorBR: "Chegando ao Brasil",
                 priceUSA: 269.99, vendorUSA: "Amazon USA (2-pack)",
-                unit: "PAR"
+                unit: "PAR", ports: "4× 2.5 GbE"
             },
             { 
-                id: 14, name: "ASUS ZenWiFi BT10", region: "EUA", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 8, total: 18.0, 
+                id: 14, name: "ASUS ZenWiFi BT10", wifi: "Wi-Fi 7", mimo: "4x4", backhaul: 11.5, price: 8, total: 18.0, 
                 url: "https://www.asus.com/pt/networking-iot-servers/whole-home-mesh-systems/asus-zenwifi/asus-zenwifi-bt10/",
                 img: "https://raw.githubusercontent.com/jmarcosbz9/Imagens-Figuras-Icones/main/Asus_ZenWiFi_BT10.png",
                 desc: "Top premium Wi-Fi 7. Dual 10G por nó, MLO, AiMesh AI-powered. Melhor que o Orbi 870 para casas cabeadas.",
-                priceBR: null, priceBRLabel: "~R$ 4.900", vendorBR: "Importado",
+                priceBR: null, priceBRLabel: "~R$ 4.900*", vendorBR: "Importado",
                 priceUSA: 500.00, vendorUSA: "Amazon USA (2-pack, promo)",
-                unit: "PAR"
+                unit: "PAR", ports: "2× 10 GbE · 1× 2.5 GbE"
             },
         ];
 
@@ -759,35 +671,20 @@
                         { label: 'Backhaul Gbps', data: [], backgroundColor: '#0d9488', borderRadius: 4 }
                     ]
                 },
-                options: { 
-                    responsive: true, maintainAspectRatio: false, 
-                    scales: { y: { beginAtZero: true } },
-                    plugins: { legend: { position: 'bottom' } }
-                }
+                options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } }, plugins: { legend: { position: 'bottom' } } }
             });
 
             const ctxC = document.getElementById('costChart').getContext('2d');
             cChart = new Chart(ctxC, {
                 type: 'bubble',
-                data: { 
-                    datasets: [{ 
-                        label: 'Eficiência por Fluxos (MIMO)', 
-                        data: [], 
-                        backgroundColor: 'rgba(13, 148, 136, 0.5)', 
-                        borderColor: '#0d9488', 
-                        borderWidth: 2 
-                    }] 
-                },
+                data: { datasets: [{ label: 'Eficiência por Fluxos (MIMO)', data: [], backgroundColor: 'rgba(13, 148, 136, 0.5)', borderColor: '#0d9488', borderWidth: 2 }] },
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     scales: {
                         x: { title: { display: true, text: 'Backhaul (Gbps)' } },
                         y: { title: { display: true, text: 'Preço Relativo' }, min: 0, max: 12 }
                     },
-                    plugins: { 
-                        legend: { position: 'bottom' },
-                        tooltip: { callbacks: { label: (c) => routerData[c.dataIndex].name } }
-                    }
+                    plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: (c) => routerData[c.dataIndex].name } } }
                 }
             });
         }
@@ -798,6 +695,7 @@
             
             routerData.forEach(item => {
                 const combinedBadge = `MIMO ${item.mimo} * ${item.wifi}`;
+                const btNote = item.id === 14 ? `<p class="text-[10px] text-slate-400 italic mt-2 pl-1">* Sem incluir o imposto de importação de 60%.</p>` : '';
                 
                 grid.innerHTML += `
                     <div onclick="window.open('${item.url}', '_blank')" class="glass-panel p-6 rounded-2xl card-clickable flex flex-col h-full border-t-4 border-brand-500">
@@ -808,22 +706,17 @@
                             <span class="text-[11px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full bg-brand-100 text-brand-700 border border-brand-200 shadow-sm">${combinedBadge}</span>
                         </div>
                         <h4 class="text-xl font-black text-slate-900 mb-1 tracking-tight text-left">${item.name}</h4>
-                        <div class="text-[9px] font-bold text-brand-500 uppercase tracking-tighter mb-4 text-left">${item.region}</div>
                         <p class="text-xs text-slate-500 mb-6 flex-grow leading-relaxed italic text-left">"${item.desc}"</p>
                         
                         <div class="p-4 bg-slate-900 rounded-xl mb-4 border border-slate-700">
-                            <!-- Header -->
-                            <div class="flex justify-between text-sm text-brand-500 font-black uppercase tracking-widest border-b border-white/10 pb-2 mb-3">
-                                <span>Preço</span>
-                                <span>${item.unit}</span>
+                            <div class="text-sm text-brand-500 font-black uppercase tracking-widest border-b border-white/10 pb-2 mb-3">
+                                PREÇO — ${item.unit}
                             </div>
-                            <!-- Linha Brasil -->
                             <div class="flex items-center gap-2 text-white text-sm font-black mb-1">
                                 <span class="text-xl" title="Brasil">🇧🇷</span>
                                 <span>${item.priceBR ? 'R$ ' + item.priceBR.toLocaleString('pt-BR') : (item.priceBRLabel || '—')}</span>
                             </div>
                             <div class="text-xs text-white font-semibold mb-3 pl-8">${item.vendorBR}</div>
-                            <!-- Linha EUA -->
                             <div class="border-t border-white/5 pt-3">
                                 <div class="flex items-center gap-2 mb-1">
                                     <span class="text-xl" title="EUA">🇺🇸</span>
@@ -832,6 +725,12 @@
                                 <div class="text-sm text-slate-200 font-bold pl-8 mb-1">${item.priceUSA ? 'US$ ' + item.priceUSA.toFixed(2) + ' → R$ ' + (item.priceUSA * USD_BRL).toLocaleString('pt-BR', {maximumFractionDigits:0}) : '<span class="text-slate-400 font-normal text-xs">' + item.vendorUSA + '</span>'}</div>
                                 <div class="text-xs text-white font-semibold pl-8">${item.priceUSA ? item.vendorUSA : ''}</div>
                             </div>
+                            ${btNote}
+                        </div>
+
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 mb-3 text-left">
+                            <div class="text-[10px] font-black uppercase text-slate-400 mb-1">Nº de Portas · Velocidade</div>
+                            <div class="text-xs font-bold text-slate-700">${item.ports}</div>
                         </div>
 
                         <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 mt-auto text-left">
@@ -843,6 +742,7 @@
                                 <div class="bg-brand-500 h-full" style="width: ${(item.backhaul / 12) * 100}%"></div>
                             </div>
                         </div>
+                    </div>
                 `;
             });
 
@@ -868,6 +768,7 @@
             }
         };
     </script>
+
     <!-- Lightbox -->
     <div id="img-lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
         <div class="lb-box">
@@ -880,14 +781,11 @@
     </div>
 
     <script>
-        // Lightbox com pan/grab
         const lightbox  = document.getElementById('img-lightbox');
         const lbImg     = document.getElementById('lb-img');
         const lbWrap    = document.getElementById('lb-wrap');
         const lbCaption = document.getElementById('lb-caption');
         const lbClose   = document.getElementById('lb-close');
-
-        // Open lightbox on click of footer-img-popup
         let isPannable = false;
 
         document.querySelectorAll('.footer-img-popup').forEach(popup => {
@@ -895,56 +793,30 @@
                 const imgEl = popup.querySelector('.footer-img-content img');
                 if (!imgEl) return;
                 isPannable = popup.classList.contains('lb-pannable');
-                lbImg.src = imgEl.src;
-                lbImg.alt = imgEl.alt;
-                lbCaption.textContent = imgEl.alt;
-                // Reset pan
-                translateX = 0; translateY = 0;
-                lbImg.style.transform = 'translate(0px, 0px)';
+                lbImg.src = imgEl.src; lbImg.alt = imgEl.alt; lbCaption.textContent = imgEl.alt;
+                translateX = 0; translateY = 0; lbImg.style.transform = 'translate(0px, 0px)';
                 lbWrap.style.cursor = isPannable ? 'grab' : 'default';
-                lightbox.classList.add('open');
-                e.stopPropagation();
+                lightbox.classList.add('open'); e.stopPropagation();
             });
         });
 
-        // Close on ✕ button
         lbClose.addEventListener('click', () => lightbox.classList.remove('open'));
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
 
-        // Close on click outside lb-box
-        lightbox.addEventListener('click', e => {
-            if (e.target === lightbox) lightbox.classList.remove('open');
-        });
-
-        // Close on Escape
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') lightbox.classList.remove('open');
-        });
-
-        // Pan / grab functionality
-        let isDragging = false;
-        let startX, startY, translateX = 0, translateY = 0, lastX = 0, lastY = 0;
+        let isDragging = false, startX, startY, translateX = 0, translateY = 0;
 
         lbWrap.addEventListener('mousedown', e => {
-            if (!isPannable) return;
-            isDragging = true;
-            startX = e.clientX - translateX;
-            startY = e.clientY - translateY;
-            lbWrap.classList.add('grabbing');
-            e.preventDefault();
+            if (!isPannable) return; isDragging = true;
+            startX = e.clientX - translateX; startY = e.clientY - translateY;
+            lbWrap.classList.add('grabbing'); e.preventDefault();
         });
-
         document.addEventListener('mousemove', e => {
             if (!isDragging || !isPannable) return;
-            translateX = e.clientX - startX;
-            translateY = e.clientY - startY;
+            translateX = e.clientX - startX; translateY = e.clientY - startY;
             lbImg.style.transform = `translate(${translateX}px, ${translateY}px)`;
         });
-
-        document.addEventListener('mouseup', () => {
-            if (!isDragging) return;
-            isDragging = false;
-            lbWrap.classList.remove('grabbing');
-        });
+        document.addEventListener('mouseup', () => { if (!isDragging) return; isDragging = false; lbWrap.classList.remove('grabbing'); });
     </script>
 
 </body>
