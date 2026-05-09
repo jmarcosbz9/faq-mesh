@@ -484,8 +484,8 @@
         const ctxC = document.getElementById('costChart').getContext('2d');
         cChart = new Chart(ctxC, {
             type: 'bubble',
-            data: { datasets:[{ label:'Eficiência por Fluxos (MIMO)', data:[], backgroundColor:'rgba(13,148,136,0.5)', borderColor:'#0d9488', borderWidth:2 }] },
-            options: { responsive:true, maintainAspectRatio:false, scales:{ x:{ title:{ display:true, text:'Backhaul (Gbps)' } }, y:{ title:{ display:true, text:'Preço Relativo' }, min:0, max:12 } }, plugins:{ legend:{ position:'bottom' }, tooltip:{ callbacks:{ label:(c)=>routerData[c.dataIndex].name } } } }
+            data: { datasets:[{ label:'Eficiência por Fluxos (MIMO): quanto maior o círculo, mais eficiente o fluxo', data:[], backgroundColor:'rgba(13,148,136,0.5)', borderColor:'#0d9488', borderWidth:2, pointStyle:'circle' }] },
+            options: { responsive:true, maintainAspectRatio:false, scales:{ x:{ title:{ display:true, text:'Backhaul (Gbps)' } }, y:{ title:{ display:true, text:'Preço Relativo' }, min:0, max:12 } }, plugins:{ legend:{ position:'bottom', labels:{ usePointStyle:true, pointStyle:'circle' } }, tooltip:{ callbacks:{ label:(c)=>routerData[c.dataIndex].name } } } }
         });
     }
 
