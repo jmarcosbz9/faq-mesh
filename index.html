@@ -123,7 +123,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <div class="text-base text-rose-900/80 leading-relaxed space-y-3">
                         <p>Mesh é, a rigor, uma topologia de rede. Mas no uso cotidiano o termo ganhou um significado mais específico: a capacidade de um sistema de roteadores de transferir automaticamente o seu celular — ou qualquer dispositivo — para o nó com o melhor sinal, à medida que você se move pela casa.</p>
-                        <p>Como a <span class="term-tooltip font-bold text-rose-700">passagem de bastão<span class="term-content" style="color:#134e4a;">Roaming, em linguagem Nerd.</span></span> na prova de revezamento: sem queda, sem precisar trocar de rede manualmente. É o que diferencia um sistema Mesh de simplesmente ter dois roteadores em casa: a inteligência de saber <em>qual</em> nó deve atender <em>qual</em> dispositivo, <em>quando</em>.</p>
+                        <p>É a <strong>passagem de bastão</strong> da prova de revezamento, mas sem queda e sem precisar trocar de rede manualmente. É o que diferencia um sistema Mesh de simplesmente ter dois roteadores em casa: a inteligência de saber <em>qual</em> nó deve atender <em>qual</em> dispositivo, <em>quando</em>.</p>
                     </div>
                     <div>
                         <style>
@@ -575,7 +575,7 @@
             if(videoB64){
                 lbImg.style.display='none';
                 const vid=document.createElement('video');
-                vid.id='lb-video'; vid.autoplay=true; vid.loop=true; vid.controls=true;
+                vid.id='lb-video'; vid.autoplay=true; vid.loop=true; vid.muted=true;
                 vid.style.cssText='max-width:100%;border-radius:8px;display:block;';
                 const src=document.createElement('source'); src.src=videoB64; src.type='video/mp4';
                 vid.appendChild(src); lbWrap.insertBefore(vid,lbImg);
